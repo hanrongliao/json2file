@@ -17,7 +17,12 @@ npm install json2filejs --save
 ```js
 new Json2file({
     headers: [{
-        name: '名称'
+        key: 'name',
+        text: '姓名',
+    },
+    {
+        key: 'age',
+        text: ''
     }], // 表头
     data: [{
         name: 'json'

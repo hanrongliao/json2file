@@ -13,7 +13,7 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    library: 'webpackTest',
+    library: 'Json2File',
     libraryTarget: 'umd',
     libraryExport: 'default'
   }
