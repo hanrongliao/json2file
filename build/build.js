@@ -23,10 +23,10 @@ const webpackConfig = {
     }),
   ],
   output: {
-    filename: 'index.js',
+    filename: 'index.min.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    library: 'Json2File',
+    library: 'Json2FileJs',
     libraryTarget: 'umd',
     libraryExport: 'default'
   }

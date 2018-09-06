@@ -10,10 +10,10 @@ module.exports = {
     })
   ],
   output: {
-    filename: 'index.js',
+    filename: 'index.min.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    library: 'Json2File',
+    library: 'Json2FileJS',
     libraryTarget: 'umd',
     libraryExport: 'default'
   }

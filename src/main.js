@@ -1,7 +1,7 @@
 import saveAs from 'file-saverjs'
 import XLSX from 'xlsx/dist/xlsx.core.min'
 
-function Json2File(options) {
+function Json2FileJS(options) {
   this.headers = options.headers
   this.data = options.data
   this.filename = options.name
@@ -37,7 +37,7 @@ const getXLSXFormatData = (headers, data) => {
   return { order, data: [headerList].concat(data) }
 }
 
-Json2File.prototype = {
+Json2FileJS.prototype = {
   exportCSV() {
     const data = getCSVFormatData(this.headers, this.data)
     const blob = new Blob([data], { type: 'text/csv;charset=utf-8' })
@@ -54,4 +54,4 @@ Json2File.prototype = {
   },
 }
 
-export default Json2File
+export default Json2FileJS

@@ -5,7 +5,8 @@
   <title>JS将JSON数据导出为CSV或者XLSX文件</title>
 </head>
 <body>
-  <button>测试</button>
+  <button onclick="saver.exportXLSX()">导出为xlsx文件</button>
+  <button onclick="saver.exportCSV()">导出为csv文件</button>
 </body>
 <script>
   var headers = [
@@ -34,7 +35,7 @@
       sex: '女',
     }
   ]
-  var saver = new Json2File({ headers, data })
+  var saver = new Json2FileJS({ headers, data })
 
 </script>
 </html>
