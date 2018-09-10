@@ -1,6 +1,6 @@
 {
   "name": "json2filejs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "export json data to csv and xlsx file",
   "main": "./dist/index.js",
   "scripts": {

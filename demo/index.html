@@ -2,40 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script type="text/javascript" src="./xlsx.core.min.js"></script>
+  <script type="text/javascript" src="./FileSaver.min.js"></script>
+  <script type="text/javascript" src="./json2filejs.min.js"></script>
   <title>JS将JSON数据导出为CSV或者XLSX文件</title>
 </head>
 <body>
   <button onclick="saver.exportXLSX()">导出为xlsx文件</button>
   <button onclick="saver.exportCSV()">导出为csv文件</button>
 </body>
-<script>
-  var headers = [
-    {
-      text: '姓名',
-      key: 'name',
-    },
-    {
-      text: '年龄',
-      key: 'age',
-    },
-    {
-      text: '性别',
-      key: 'sex',
-    },
-  ]
-  var data = [
-    {
-      sex: '男',
-      name: '小明',
-      age: 3,
-    },
-    {
-      age: 7,
-      name: '小红',
-      sex: '女',
-    }
-  ]
-  var saver = new Json2FileJS({ headers, data })
-
-</script>
+<script type="text/javascript" src="./demo.js"></script>
 </html>

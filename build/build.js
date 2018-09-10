@@ -1,4 +1,5 @@
 const path = require('path')
+const exec = require('process')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -22,8 +23,12 @@ const webpackConfig = {
       root: path.resolve(__dirname, '..')
     }),
   ],
+  externals: {
+    "xlsx/dist/xlsx.core.min": 'XLSX',
+    "file-saverjs": 'saveAs'
+  },
   output: {
-    filename: 'index.min.js',
+    filename: 'json2filejs.min.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
     library: 'Json2FileJs',
@@ -35,5 +40,6 @@ const webpackConfig = {
 console.log('build start!\n')
 
 webpack(webpackConfig, () => {
+  exec('cp json2filejs.min.js ')
   console.log('build complete!\n')
 })
