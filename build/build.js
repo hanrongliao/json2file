@@ -1,5 +1,4 @@
 const path = require('path')
-const exec = require('process')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -11,7 +10,7 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: '/\.js$/',
+        test: /\.js$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, '../src'),
         loader: "babel-loader"
@@ -40,6 +39,5 @@ const webpackConfig = {
 console.log('build start!\n')
 
 webpack(webpackConfig, () => {
-  exec('cp json2filejs.min.js ')
   console.log('build complete!\n')
 })
