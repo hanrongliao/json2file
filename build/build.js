@@ -10,7 +10,7 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: '/\.js$/',
+        test: /\.js$/,
         exclude: /node_modules/,
         include: path.resolve(__dirname, '../src'),
         loader: "babel-loader"
@@ -22,8 +22,12 @@ const webpackConfig = {
       root: path.resolve(__dirname, '..')
     }),
   ],
+  externals: {
+    "xlsx/dist/xlsx.core.min": 'XLSX',
+    "file-saverjs": 'saveAs'
+  },
   output: {
-    filename: 'index.min.js',
+    filename: 'json2filejs.min.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
     library: 'Json2FileJs',
