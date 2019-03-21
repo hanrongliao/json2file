@@ -30,7 +30,7 @@ const webpackConfig = {
     filename: 'json2filejs.min.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    library: 'Json2FileJs',
+    library: 'json2filejs',
     libraryTarget: 'umd',
     libraryExport: 'default'
   }
